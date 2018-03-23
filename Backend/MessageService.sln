@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageService", "MessageService\MessageService.csproj", "{4CAD98CF-FE87-41F5-BBCB-3DDB084A2308}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageService", "MessageService\MessageService.csproj", "{4CAD98CF-FE87-41F5-BBCB-3DDB084A2308}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageService.Storage", "MessageService.Storage\MessageService.Storage.csproj", "{D066522C-E137-4216-AB20-18B53F18EEEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageService.Notifications", "MessageService.Notifications\MessageService.Notifications.csproj", "{F02E087A-9AA2-4729-A388-889A164CF3CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4CAD98CF-FE87-41F5-BBCB-3DDB084A2308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CAD98CF-FE87-41F5-BBCB-3DDB084A2308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CAD98CF-FE87-41F5-BBCB-3DDB084A2308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D066522C-E137-4216-AB20-18B53F18EEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D066522C-E137-4216-AB20-18B53F18EEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D066522C-E137-4216-AB20-18B53F18EEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D066522C-E137-4216-AB20-18B53F18EEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F02E087A-9AA2-4729-A388-889A164CF3CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F02E087A-9AA2-4729-A388-889A164CF3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F02E087A-9AA2-4729-A388-889A164CF3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F02E087A-9AA2-4729-A388-889A164CF3CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

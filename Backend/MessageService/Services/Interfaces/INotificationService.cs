@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MessageService.Notifications.Interfaces
+namespace MessageService.Services.Interfaces
 {
     public interface INotificationService
     {

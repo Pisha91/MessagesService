@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using MessageService.Notifications.DTO;
 using MessageService.Notifications.Interfaces;
+using MessageService.Services.Interfaces;
 
-namespace MessageService.Notifications
+namespace MessageService.Services
 {
     public class NotificationService : INotificationService
     {

@@ -1,16 +1,17 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using MessageService.DataBase.Interfaces;
-using MessageService.DataBase.Models;
 using MessageService.DTO;
-using MessageService.Notifications.Interfaces;
+using MessageService.Services.Interfaces;
+using MessageService.Storage.Interfaces;
+using MessageService.Storage.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MessageService.Controllers
 {
     [Route("api/messages")]
+    [EnableCors("AllowAllMethods")]
     public class MessagesController : Controller
     {
         private readonly IStorageService _storageService;
@@ -25,7 +26,7 @@ namespace MessageService.Controllers
 
         [HttpPost("send")]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> Send([FromBody] Message message)
+        public async Task<string> Send([FromBody] Message message)
         {
             var isSendToAllRecipienrs = _notificationService.TryNotifyRecepients(message.RecipientIds, message.Body);
 
@@ -34,13 +35,13 @@ namespace MessageService.Controllers
             {
                 IsSent = isSendToAllRecipienrs,
                 Body = message.Body,
-                Recipients = message.RecipientIds.Select(x => new DbRecipient { Id = x }).ToList(),
+                MessageRecipients = message.RecipientIds.Select(x => new DbMessageRecipient { RecipientId = x}).ToList(),
                 Subject = message.Subject
             };
             
             await _storageService.Add(dbMessage);
 
-            return Ok(dbMessage.Id);
+            return dbMessage.Id;
         }
     }
 }

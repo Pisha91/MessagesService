@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using MessageService.DataBase.Models;
+using MessageService.Storage.Models;
 
-namespace MessageService.DataBase.Interfaces
+namespace MessageService.Storage.Interfaces
 {
     public interface IStorageService
     {

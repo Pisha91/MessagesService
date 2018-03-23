@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MessageService.DataBase.Models
+namespace MessageService.Storage.Models
 {
     public class DbMessage
     {
@@ -12,7 +12,7 @@ namespace MessageService.DataBase.Models
 
         public string Id { get; set; }
 
-        public ICollection<DbRecipient> Recipients { get; set; }
+        public ICollection<DbMessageRecipient> MessageRecipients { get; set; }
 
         public string Subject { get; set; }
 
